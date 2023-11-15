@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Styled Text</title>
+  <style>
+    #styledText {
+      font-family: Trebuchet MS;
+      font-size: 48px;
+      color: #FFFFFFFF;
+      border: 4px solid #000000;
+      padding: 10px;
+      text-shadow: 2px 2px #000000;
+    }
+  </style>
+</head>
+<body>
+  <label for="userInput">Enter your text:</label><br>
+  <input type="text" id="userInput" oninput="changeText()" placeholder="Type here"><br><br>
+  
+  <div id="styledText"></div>
+
+  <script>
+    function changeText() {
+      let userInput = document.getElementById("userInput").value;
+      let styledText = document.getElementById("styledText");
+      styledText.innerText = `# ${userInput} #`;
+    }
+  </script>
+</body>
+</html>
